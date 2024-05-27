@@ -1,0 +1,39 @@
+package large;
+import java.util.*;
+public class Kangaroojumb {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int x1=sc.nextInt();
+		int d1=sc.nextInt();
+		int x2=sc.nextInt();
+		int d2=sc.nextInt();
+		int c,n=0;
+		if(x1>x2&&d1>d2) {
+			System.out.println("NO");
+		}
+		else {
+			c=0;
+			while(c<100000)
+			{
+				x1=x1+d1;
+				x2=x2+d2;
+				c++;
+				if(x1==x2)
+				{
+					n++;
+				}
+				
+			}
+			if(n!=0) {
+				System.out.println("YES");
+			}
+			else {
+				System.out.println("NO");
+			}
+			
+		}
+
+	}
+
+}

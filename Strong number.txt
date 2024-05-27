@@ -1,0 +1,30 @@
+package large;
+import java.util.*;
+public class StrongNumber145 {
+    public static int factorial(int a) {
+    int temp=1;
+    for(int i=1;i<=a;i++){
+    	temp*=i;
+    }
+    return(temp);
+    }
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int a=sc.nextInt();	
+		int sum=0;
+		int rem=0;
+		int temp5=a;
+		while(a>0){
+		rem=a%10;
+		sum+=factorial(rem);
+		a/=10;
+		//System.out.print("Strong");
+		}if(temp5==sum) {
+			System.out.print(sum +"Strong");
+		}else {
+			System.out.print("not Strong");
+		}
+	}
+
+}

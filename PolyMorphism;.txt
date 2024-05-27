@@ -1,0 +1,27 @@
+package PolyMorphism;
+
+class B extends A{
+	int a;
+	void display() {
+		System.out.println("Not Done");
+		super.display();
+		a=100;
+		super.a=200;
+		int c=a+super.a;
+		System.out.println(c);
+		
+	}
+	B(){
+		System.out.println("B Constructor");
+	}
+	B(int a){
+		super(10);
+		System.out.println("Argument "+"B"+" Constructor");
+	}
+public static void main(String[] args) {
+	// TODO Auto-generated method stub
+	B b=new B(10);
+	b.display();
+	//super.display();
+}
+}

@@ -1,0 +1,21 @@
+package TryAgain;
+import java.util.*;
+public class A1B2C3 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		String a=sc.nextLine();
+		for(int i=0;i<a.length();i+=2) {
+		char ch=a.charAt(i);
+		int n=change(a.charAt(i+1));
+		for(int j=0;j<n;j++) {
+			System.out.print(ch);
+		}
+	}
+		
+	}
+	static int change(char ch) {
+		int x=ch;
+		return x-48;
+	}
+}

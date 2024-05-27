@@ -1,0 +1,29 @@
+package large;
+import java.util.*;
+public class PairCheck {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		String a=sc.next();
+		char b[]=a.toCharArray();
+		int sum=0;
+		for(int i=0;i<b.length;i++) {
+			 int c=1;
+			for(int j=i+1;j<b.length&&c<=1&&b[i]!='*';j++) {
+				if(a.charAt(i)==a.charAt(j)) {
+					b[j]='*';
+					c++;
+				}
+				if(c==2)
+					sum++;
+				
+			}
+		}
+		
+		System.out.println(sum);
+		System.out.print(Arrays.toString(b));
+
+	}
+
+}
+//aajaahh

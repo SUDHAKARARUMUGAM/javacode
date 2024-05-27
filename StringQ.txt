@@ -1,0 +1,23 @@
+package TCSQUES;
+import java.util.*;
+public class StringQ {
+static String twoStringCheck(String a,String b) {
+	StringBuilder result = new StringBuilder();
+	
+	for(int i=0;i<a.length();i++) {
+		char currentchar=a.charAt(i);
+		
+		if(b.indexOf(currentchar)==-1) {
+			result.append(currentchar);
+		}
+	}return result.toString();
+}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		String a=sc.next();
+		String b=sc.next();
+		String c= twoStringCheck(a,b);
+		System.out.print(c);
+	}
+}

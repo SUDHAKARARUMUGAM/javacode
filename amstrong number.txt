@@ -1,0 +1,25 @@
+package TryAgain;
+import java.util.*;
+public class Amstrong {
+public static int cube(int a) {
+	int temp=1;
+	for(int i=0;i<3;i++) {
+		temp*=a;
+	}return temp;
+}
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();int rem,sum=0;int l=0;int k=0;
+		while(n>0) {
+			rem=n%10;
+			sum+=cube(rem);
+			n/=10;
+			k++;
+			l++;
+			System.out.println("check "+l+" = "+rem);
+			System.out.println("check "+k+" = "+sum);
+		}
+		System.out.print(sum);
+	}
+
+}
